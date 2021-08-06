@@ -15,11 +15,11 @@ class AdminController extends Controller
         $this->middleware('owner');
     }
 
-    public function index(){
-        return view('home');
+    public function admin(){
+        return view('pages/admin');
     }
 
-    public function createadmin(Request $request){
+    public function inputpengeluaran(Request $request){
         $level = 'admin';
         //use eloquent model
         $admin = new Admins;

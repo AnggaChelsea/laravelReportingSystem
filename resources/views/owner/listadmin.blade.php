@@ -96,6 +96,9 @@
                     @endforeach
                   </table>
                 </div><!-- /.box-body -->
+                <div class="mt-10 b-100 d-flex justify-content-center">
+                  {!! $admins->links() !!}
+              </div>
               </div><!-- /.box -->
             </div>
           </div>

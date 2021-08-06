@@ -48,19 +48,24 @@
                   <h3 class="box-title">Register Admin</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" action="{{url('addadminweb')}}" method="POST">
+                  {{ csrf_field() }}
                   <div class="box-body">
                     <div class="form-group">
+                      <label for="exampleInputEmail1">name</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="name" name="name">
+                    </div>
+                    <div class="form-group">
                       <label for="exampleInputEmail1">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Enter email">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">level</label>
-                      <input type="text" class="form-control" id="exampleInputPassword1" value="admin" placeholder="admin" disabled>
+                      <input type="text" class="form-control" id="exampleInputPassword1" name="level" value="admin"  placeholder="admin" disabled>
                     </div>
 
                   <div class="box-footer">

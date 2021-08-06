@@ -35,6 +35,8 @@
       </ol>
     </section>
 
+    <form action="{{url('save_user')}}" method="post"></form>
+
     <!-- Main content -->
     <section class="content">
       <div class="row">

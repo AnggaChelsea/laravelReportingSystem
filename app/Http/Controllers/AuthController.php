@@ -23,7 +23,7 @@ class AuthController extends Controller
         if(Auth::attempt($kredintials)){
             $user = Auth::user();
             if($user->level == 'admin'){
-                return redirect()->intended('home');
+                return redirect()->intended('admin');
             }elseif($user->level == 'owner'){
                 return redirect()->intended('chartpemasukan');
             }
@@ -80,4 +80,10 @@ class AuthController extends Controller
         function logout(){
             return view('auth/login');
         }
+
+        function forgotpassword(Request $request){
+            
+        }
+
+
 }

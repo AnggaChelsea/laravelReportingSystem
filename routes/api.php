@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\OwnerController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,3 +24,10 @@ Route::post('/login',  [AuthController::class, 'proses_loginApi']);
 
 //register admin routes
 Route::post('/adminregister', [AdminController::class, 'createadmin']);
+
+Route::get('/paginateadmin', [OwnerController::class, 'paginateadmin']);
+
+Route::get('/listadmin', [OwnerController::class, 'listadminapi']);
+Route::get('/listadminapiid/{id}', [OwnerController::class, 'listadminapiid']);
+Route::get('/paginateadmin', [OwnerController::class, 'paginateadmin']);
+Route::post('/addadminapi', [OwnerController::class, 'addadminapi']);
